@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "d23eb500-cd60-4ed6-95ec-98bcf066788e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "spaceShips_005": {
+      "ver": "1.0.3",
+      "uuid": "a98f67d2-f9f9-4fee-a479-1a762ff97747",
+      "rawTextureUuid": "d23eb500-cd60-4ed6-95ec-98bcf066788e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 342,
+      "height": 301,
+      "rawWidth": 342,
+      "rawHeight": 301,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

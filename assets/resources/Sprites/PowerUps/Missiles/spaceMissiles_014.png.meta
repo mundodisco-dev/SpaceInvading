@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "93d1a9cc-ace7-4c9b-8c7c-b6b4b5790238",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "spaceMissiles_014": {
+      "ver": "1.0.3",
+      "uuid": "d4706e96-1737-49f2-bbe7-914bbea30e6e",
+      "rawTextureUuid": "93d1a9cc-ace7-4c9b-8c7c-b6b4b5790238",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 32,
+      "height": 44,
+      "rawWidth": 32,
+      "rawHeight": 44,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
