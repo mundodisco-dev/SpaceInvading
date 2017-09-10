@@ -17,25 +17,22 @@ cc.Class({
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = true;
 
+        this.canvas = cc.director.getScene().getChildByName('Canvas');
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            // swallowTouches: true,
             onTouchBegan: (touch, event) => {
               var touchLoc = touch.getLocation();
               if (this.node.parent.convertToNodeSpaceAR(touchLoc).y > this.shootingPosYThreshold) return true;
-              // this.createLaser(touch);
               this.shooting = true;
               return true;
             },
             onTouchMoved: (touch, event) => {
-              console.log("move");
               var touchLoc = touch.getLocation();
               if (this.node.parent.convertToNodeSpaceAR(touchLoc).y > this.shootingPosYThreshold)
               {
                 this.shooting = false;
                 return false;
               }
-              // this.createLaser(touch);
               this.shooting = true;
               return true;
             },
@@ -48,13 +45,13 @@ cc.Class({
 
     createLaser: function ()
     {
-      // var touchLoc = touch.getLocation();
-      // if (this.node.parent.convertToNodeSpaceAR(touchLoc).y > this.shootingPosYThreshold) return true;
       var laser = cc.instantiate(this.laser);
-      laser.position = {x:0,y:70};
+      var tempPos = this.node.parent.position;
+      tempPos.y += 50;
+      laser.position = tempPos;
       laser.active = true;
       laser.zIndex = -1;
-      this.node.parent.addChild(laser);
+      this.canvas.addChild(laser);
       return true;
     },
 
@@ -64,7 +61,7 @@ cc.Class({
     },
 
     inTimeRange: function () {
-      return (Date.now() -  this.lastShot > this.waitMssTimePerShot)
+      return ((Date.now() - this.lastShot) > this.waitMssTimePerShot);
     },
 
     // called every frame, uncomment this function to activate update callback

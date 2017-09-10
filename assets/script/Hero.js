@@ -47,7 +47,6 @@ cc.Class({
             event: cc.EventListener.KEYBOARD,
             // set a flag when key pressed
             onKeyPressed: function(keyCode, event) {
-                console.log(keyCode);
                 switch(keyCode) {
                     case cc.KEY.a:
                     case cc.KEY.left:
