@@ -8,7 +8,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-      this.xSpeed = 0;
       this.moveThreshold = 1;
       this.isMoving = false;
       // screen boundaries
@@ -16,7 +15,10 @@ cc.Class({
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
       this.setInputControlByTouch();
-      // this.setInputControl();
+      this.setInputControl();
+
+      cc.director.getCollisionManager().enabled = true;
+      cc.director.getCollisionManager().enabledDebugDraw = true;
     },
 
     setInputControlByTouch: function ()
@@ -45,6 +47,7 @@ cc.Class({
             event: cc.EventListener.KEYBOARD,
             // set a flag when key pressed
             onKeyPressed: function(keyCode, event) {
+                console.log(keyCode);
                 switch(keyCode) {
                     case cc.KEY.a:
                     case cc.KEY.left:
@@ -122,16 +125,12 @@ cc.Class({
 
       // limit player position inside screen
       if ( newPos.x > this.maxPosX) {
-          console.log(newPos.x);
-          console.log(this.maxPosX);
-          console.log("--");
           newPos.x = this.maxPosX;
           return;
       } else if (newPos.x < this.minPosX) {
           this.node.x = this.minPosX;
           return;
       }
-
       if (Math.abs(oldPos.x - newPos.x) > this.moveThreshold)
       {
         this.setSideAnimation(direction.x);
