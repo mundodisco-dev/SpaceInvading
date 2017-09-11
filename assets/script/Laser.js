@@ -11,6 +11,7 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
+        console.log("collision!");
         this.node.destroy();
     },
 
