@@ -15,7 +15,7 @@ cc.Class({
         this.shooting = false;
         this.lastShot = Date.now();
         cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
+
 
         this.canvas = cc.director.getScene().getChildByName('Canvas');
         cc.eventManager.addListener({

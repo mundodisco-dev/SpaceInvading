@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        speed: 250
+        speed: 350
     },
 
     // use this for initialization
@@ -11,7 +11,6 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        console.log("collision!");
         this.node.destroy();
     },
 

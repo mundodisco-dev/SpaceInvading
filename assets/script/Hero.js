@@ -18,7 +18,7 @@ cc.Class({
       this.setInputControl();
 
       cc.director.getCollisionManager().enabled = true;
-      cc.director.getCollisionManager().enabledDebugDraw = true;
+
     },
 
     setInputControlByTouch: function ()
