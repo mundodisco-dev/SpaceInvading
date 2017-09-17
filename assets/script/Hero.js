@@ -11,7 +11,7 @@ cc.Class({
       this.moveThreshold = 1;
       this.isMoving = false;
       // screen boundaries
-      this.sideMargin = 60;
+      this.sideMargin = this.canvas.getComponent("Game").sideMargin;
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
       this.setInputControlByTouch();

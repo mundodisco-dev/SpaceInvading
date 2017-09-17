@@ -4,6 +4,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        sideMargin : 60,
         enemyPrefab: {
             default: null,
             type: cc.Prefab
@@ -11,8 +12,7 @@ cc.Class({
         player: {
             default: null,
             type: cc.Node
-        }
-
+        },
     },
 
     // use this for initialization
@@ -48,7 +48,6 @@ cc.Class({
     // console.log(this.enemyPool.size());
     var positionX = -2 * horizontalEnemyMargin;
     var positionY = -100;
-
     for (var j=1; j<numberLines+1; j++)
     {
       var url = "Sprites/Enemy/enemyBlue"+j;
@@ -57,7 +56,7 @@ cc.Class({
         newEnemy = cc.instantiate(this.enemyPrefab);
         this.node.addChild(newEnemy);
         newEnemy.setPosition({x:positionX + (i * horizontalEnemyMargin),y:positionY + j * verticalEnemyMargin});
-        newEnemy.getComponent('Enemy').init(this,i,url);
+        newEnemy.getComponent('Enemy').init(this,i,url,numberEnemies,this.sideMargin, horizontalEnemyMargin, verticalEnemyMargin);
       }
     }
 
