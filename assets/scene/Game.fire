@@ -240,7 +240,7 @@
       "__id__": 4
     },
     "_enabled": true,
-    "speed": 250
+    "speed": 500
   },
   {
     "__type__": "cc.Sprite",
@@ -622,6 +622,7 @@
       "__id__": 2
     },
     "_enabled": true,
+    "sideMargin": 60,
     "enemyPrefab": {
       "__uuid__": "d0615486-b7dd-450b-aaad-9d2e2e1bbe7e"
     },
@@ -694,7 +695,8 @@
     "node": {
       "__id__": 16
     },
-    "_enabled": true
+    "_enabled": true,
+    "speed": 1
   },
   {
     "__type__": "cc.Sprite",

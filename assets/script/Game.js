@@ -19,7 +19,6 @@ cc.Class({
     onLoad: function () {
       this.isRunning = false;
 
-      this.enemyPool = new cc.NodePool("Enemy");
       //console.log(Enemy);
       this.onStartGame();
     },
@@ -43,21 +42,26 @@ cc.Class({
     var newEnemy = null;
     var numberEnemies = 5;
     var numberLines = 5;
+    var numberLines = 1;
     var horizontalEnemyMargin = 70;
-    var verticalEnemyMargin = 80;
-    // console.log(this.enemyPool.size());
+    var verticalEnemyMargin = 70;
+    // this.node.on("EnemyKilled",this.reCalculateMargin);
     var positionX = -2 * horizontalEnemyMargin;
     var positionY = -100;
-    for (var j=1; j<numberLines+1; j++)
+    this.EnemyMapPool = [];
+    for (var j=0; j<numberLines+0; j++)
     {
-      var url = "Sprites/Enemy/enemyBlue"+j;
+      var url = "Sprites/Enemy/enemyBlue"+(j+1);
+      var tempEnemyPool = [];
       for (var i=0; i<numberEnemies; i++)
       {
+        tempEnemyPool.push(1);
         newEnemy = cc.instantiate(this.enemyPrefab);
         this.node.addChild(newEnemy);
         newEnemy.setPosition({x:positionX + (i * horizontalEnemyMargin),y:positionY + j * verticalEnemyMargin});
-        newEnemy.getComponent('Enemy').init(this,i,url,numberEnemies,this.sideMargin, horizontalEnemyMargin, verticalEnemyMargin);
+        newEnemy.getComponent('Enemy').init(this,this.EnemyMapPool,i,j,url,numberEnemies,this.sideMargin, horizontalEnemyMargin, verticalEnemyMargin);
       }
+      this.EnemyMapPool.push(tempEnemyPool);
     }
 
   },
