@@ -14,9 +14,6 @@ cc.Class({
     onLoad: function () {
         this.shooting = false;
         this.lastShot = Date.now();
-        cc.director.getCollisionManager().enabled = true;
-
-
         this.canvas = cc.director.getScene().getChildByName('Canvas');
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
@@ -55,17 +52,21 @@ cc.Class({
       return true;
     },
 
-    onDisable: function () {
+    onDisable: function ()
+    {
         cc.director.getCollisionManager().enabled = false;
         cc.director.getCollisionManager().enabledDebugDraw = false;
     },
 
-    inTimeRange: function () {
+    inTimeRange: function ()
+    {
       return ((Date.now() - this.lastShot) > this.waitMssTimePerShot);
     },
 
-    // called every frame, uncomment this function to activate update callback
-    update: function (dt) {
+    update: function (dt)
+    {
+      // TO-DO , power up, multidisparo
+      // TO-DO , permitir disparar solo tras la muerte del laser previo
       if (this.shooting && this.inTimeRange()) {
         this.lastShot = Date.now();
         this.createLaser();

@@ -3,7 +3,7 @@ cc.Class({
 
     properties: {
         canvas: cc.Node,
-        speed: 0,
+        speed: 250,
     },
 
     // use this for initialization
@@ -16,9 +16,6 @@ cc.Class({
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
       this.setInputControlByTouch();
       this.setInputControl();
-
-      cc.director.getCollisionManager().enabled = true;
-
     },
 
     setInputControlByTouch: function ()
@@ -107,6 +104,12 @@ cc.Class({
       cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
         sprite.spriteFrame = spriteFrame;
       });
+    },
+
+    onCollisionEnter: function (other, self) {
+      var event = new cc.Event.EventCustom("GameOver", true);
+      this.node.dispatchEvent(event);
+      // this.node.destroy();
     },
 
     // called every frame
