@@ -109,7 +109,8 @@ cc.Class({
     onCollisionEnter: function (other, self) {
       var event = new cc.Event.EventCustom("GameOver", true);
       this.node.dispatchEvent(event);
-      // this.node.destroy();
+      // TO-DO colision del UFO te da escudo      
+      this.node.destroy();
     },
 
     // called every frame

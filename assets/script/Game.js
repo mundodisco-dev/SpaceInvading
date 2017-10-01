@@ -39,6 +39,7 @@ cc.Class({
   {
     // TO-DO
     console.log("game over");
+    cc.director.loadScene('Menu');
   },
 
   reSpawn: function() {

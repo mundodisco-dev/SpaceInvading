@@ -15,6 +15,19 @@ cc.Class({
         // this.label.string = this.text;
     },
 
+	
+	 lauchGame: function () {
+     //   this.showReadme(null, false);
+   //      this.currentSceneUrl = 'TestList.fire';
+    //    this.isMenu = true;
+        cc.director.loadScene('Game', this.onLoadSceneFinish.bind(this));
+    },
+	
+	
+    onLoadSceneFinish: function () {
+	
+    },	
+	
     // called every frame
     update: function (dt) {
 
