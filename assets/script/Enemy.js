@@ -8,7 +8,7 @@ cc.Class({
     },
     speedX : 1,
     speedY : 1,
-    downStep: 15
+    downStep: 10
   },
 
   // use this for initialization

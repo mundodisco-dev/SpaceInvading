@@ -26,7 +26,7 @@ cc.Class({
 
 
   onStartGame: function () {
-    cc.director.getCollisionManager().enabled = true;
+    // cc.director.getCollisionManager().enabled = true;
 
       // 初始化计分
       // this.resetScore();
@@ -58,7 +58,7 @@ cc.Class({
     var verticalEnemyMargin = 70;
     var positionX = -2 * horizontalEnemyMargin;
     // TO-DO Levels
-    var positionY = 80;
+    var positionY = 40;
     this.EnemyMapPool = [];
     for (var j=0; j<numberLines+0; j++)
     {
