@@ -26,13 +26,13 @@ cc.Class({
 
 
   onStartGame: function () {
-    // cc.director.getCollisionManager().enabled = true;
+    cc.director.getCollisionManager().enabled = true;
+    // cc.director.getCollisionManager().enabledDebugDraw  = true;
+    
+    // this.resetScore();
 
-      // 初始化计分
-      // this.resetScore();
-      // set game state to running
-      this.isRunning = true;
-      this.spawnEnemies();
+    this.isRunning = true;
+    this.spawnEnemies();
   },
 
   onGameOver: function ()

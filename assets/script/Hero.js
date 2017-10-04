@@ -14,6 +14,7 @@ cc.Class({
       this.sideMargin = this.canvas.getComponent("Game").sideMargin;
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
+      this.alive = true;
       this.setInputControlByTouch();
       this.setInputControl();
     },
@@ -107,14 +108,16 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
+      this.alive = false;
       var event = new cc.Event.EventCustom("GameOver", true);
       this.node.dispatchEvent(event);
-      // TO-DO colision del UFO te da escudo      
       this.node.destroy();
+      // TO-DO colision del UFO te da escudo
     },
 
     // called every frame
     update: function (dt) {
+      if (!this.alive) return;
       if (!this.isMoving)
       {
         this.setSideAnimation(0);

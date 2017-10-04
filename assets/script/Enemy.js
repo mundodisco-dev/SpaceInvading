@@ -19,7 +19,7 @@ cc.Class({
 
     this.canvas = cc.director.getScene().getChildByName('Canvas');
     this.lastShot = Date.now();
-    this.waitMssTimePerShot = 5000;
+    this.waitMssTimePerShot = 4000;
     this.resetNumberTimesAllowedReachFinal();
   },
 

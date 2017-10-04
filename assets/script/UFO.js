@@ -3,6 +3,11 @@ cc.Class({
 
     properties: {
         speed: 2,
+        canvas: cc.Node,
+        laser: {
+            default: null,
+            type: cc.Node
+        },
     },
 
     // use this for initialization
@@ -10,13 +15,50 @@ cc.Class({
       this.speedRotation = 0.5;
       this.maxRotation = 25;
       this.isSpawned = false;
+      this.isMoving = true;
       this.minPosX = -this.node.parent.width/2 - 200;
       this.maxPosX = this.node.parent.width/2 + 200;
+      this.UFOLaser = this.laser.getComponent("UFOLaser");
+      this.node.on('laserDone', this.laserDone, this);
+      this.setInputControlByTouch();
     },
 
-    onCollisionEnter: function (other, self) {
+    setInputControlByTouch: function ()
+    {
+      var self = this;
+      this.canvas.on(cc.Node.EventType.TOUCH_START, function (event) {
+      var touches = event.getTouches();
+      var touchLoc = touches[0].getLocation();
+      if (self.inRange(self.node.position,this.parent.convertToNodeSpaceAR(touchLoc)))
+      {
+        self.activateLaser(false);
+      }
+      }, this.node);
+    },
+
+    inRange: function (myPosition,clickedPosition)
+    {
+      return ((myPosition.x < clickedPosition.x + 50) && (myPosition.x > clickedPosition.x - 50))
+    },
+
+    laserDone: function ()
+    {
+      this.isMoving = true;
+      this.laserAttacked = false;
+    },
+
+    activateLaser: function (activatedByHit)
+    {
+      this.isMoving = false;
+      this.laserAttacked = true;
+      this.activatedByHit = activatedByHit;
+    },
+
+    onCollisionEnter: function (other, self)
+    {
       // TO-DO
       console.log("UFO hit! Shoot!");
+      this.activateLaser(true);
     },
 
 
@@ -31,7 +73,7 @@ cc.Class({
       {
         this.speedRotation *=-1;
       }
-      else if (cc.random0To1() < 0.05) this.speedRotation *=-1;      
+      else if (cc.random0To1() < 0.05) this.speedRotation *=-1;
       this.node.rotation = newRotation;
     },
 
@@ -48,9 +90,15 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-      if (this.isSpawned || this.decidedToSpawn())
+      if (this.isMoving && (this.isSpawned || this.decidedToSpawn()))
       {
         this.goOtherSide();
       }
+      if (this.laserAttacked)
+      {
+        this.laser.active = true;
+        this.UFOLaser.activateLaser(this.activatedByHit);
+      }
+
     },
 });
