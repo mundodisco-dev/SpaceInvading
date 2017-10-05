@@ -16,8 +16,8 @@ cc.Class({
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
       this.currentSideAnimation = 0;
       this.alive = true;
-      this.setInputControlByTouch();
-      this.setInputControl();
+      // this.setInputControlByTouch();
+      // this.setInputControl();
     },
 
     setInputControlByTouch: function ()
@@ -109,6 +109,7 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
+      return;
       this.alive = false;
       var event = new cc.Event.EventCustom("GameOver", true);
       this.node.dispatchEvent(event);

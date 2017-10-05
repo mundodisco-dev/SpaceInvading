@@ -38,7 +38,7 @@ cc.Class({
 
     inRange: function (myPosition,clickedPosition)
     {
-      return ((myPosition.x < clickedPosition.x + 50) && (myPosition.x > clickedPosition.x - 50))
+      return ((myPosition.x < clickedPosition.x + 50) && (myPosition.x > clickedPosition.x - 50) && (myPosition.y < clickedPosition.y + 50) && (myPosition.y > clickedPosition.y - 50))
     },
 
     laserDone: function ()
