@@ -14,16 +14,20 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+      this.pressedShoot = false;
       this.pressedLeft = false;
       this.pressedRight = false;
-      this.pressedShoot = false;
-      this.Shooter = this.Shooter.getComponent("Shooter");
-      this.Hero = this.Hero.getComponent("player");
+      this.ShooterComponent = this.Shooter.getComponent("Shooter");
+      this.HeroComponent = this.Hero.getComponent("Hero");
     },
 
     update: function (dt) {
-      if (this.pressedShoot) this.Shooter.startShooting()
-      else this.Shooter.stopShooting();
+      if (this.pressedShoot) this.ShooterComponent.startShooting();
+      else this.ShooterComponent.stopShooting();
+
+      if (this.pressedLeft) this.HeroComponent.moveLeft();
+      else if (this.pressedRight) this.HeroComponent.moveRight();
+      else this.HeroComponent.stopped();
     },
 
 

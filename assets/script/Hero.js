@@ -10,6 +10,7 @@ cc.Class({
     onLoad: function () {
       this.moveThreshold = 1;
       this.isMoving = false;
+      this.direction = 0;
       // screen boundaries
       this.sideMargin = this.canvas.getComponent("Game").sideMargin;
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
@@ -117,6 +118,21 @@ cc.Class({
       // TO-DO colision del UFO te da escudo
     },
 
+    moveLeft: function(){
+      this.isMoving = true;
+      this.direction = {x:-1,y:0};
+    },
+
+    moveRight: function(){
+      this.isMoving = true;
+      this.direction = {x:1,y:0};
+    },
+
+    stopped: function(){
+      this.isMoving = false;
+      this.direction = {x:0,y:0};
+    },
+
     // called every frame
     update: function (dt) {
       if (!this.alive) return;
@@ -129,9 +145,11 @@ cc.Class({
       }
       var oldPos = this.node.position;
       // get move direction
-      var direction = cc.pNormalize(cc.pSub(this.moveToPos, oldPos));
+      // var direction = cc.pNormalize(cc.pSub(this.moveToPos, oldPos));
+      // console.log(direction);
+      // console.log(this.direction);
       // multiply direction with distance to get new position
-      var newPos = cc.pAdd(oldPos, cc.pMult(direction, this.speed * dt));
+      var newPos = cc.pAdd(oldPos, cc.pMult(this.direction, this.speed * dt));
 
       // limit player position inside screen
       if ( newPos.x > this.maxPosX) {
@@ -143,8 +161,8 @@ cc.Class({
       }
       if (Math.abs(oldPos.x - newPos.x) > this.moveThreshold)
       {
-        this.setSideAnimation(direction.x);
-        this.currentSideAnimation = direction.x;
+        this.setSideAnimation(this.direction.x);
+        this.currentSideAnimation = this.direction.x;
         this.node.setPositionX(newPos.x);
       }
 

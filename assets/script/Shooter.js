@@ -14,21 +14,21 @@ cc.Class({
     onLoad: function () {
         this.shooting = false;
         this.lastShot = Date.now();
+        this.canvas = cc.director.getScene().getChildByName('Canvas');
         // this.touchPadShooting();
     },
 
 
-    startShooting: function () {
-        this.shooting = true;
+    startShooting: function (self) {
+      this.shooting = true;
     },
 
     stopShooting: function () {
-        this.shooting = false;
+      this.shooting = false;
     },
 
     touchPadShooting: function ()
     {
-      this.canvas = cc.director.getScene().getChildByName('Canvas');
       cc.eventManager.addListener({
           event: cc.EventListener.TOUCH_ONE_BY_ONE,
           onTouchBegan: (touch, event) => {
