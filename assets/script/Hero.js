@@ -14,6 +14,7 @@ cc.Class({
       this.sideMargin = this.canvas.getComponent("Game").sideMargin;
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
+      this.currentSideAnimation = 0;
       this.alive = true;
       this.setInputControlByTouch();
       this.setInputControl();
@@ -120,6 +121,8 @@ cc.Class({
       if (!this.alive) return;
       if (!this.isMoving)
       {
+        if (this.currentSideAnimation != 0) return;
+        this.currentSideAnimation = 0;
         this.setSideAnimation(0);
         return;
       }
@@ -140,6 +143,7 @@ cc.Class({
       if (Math.abs(oldPos.x - newPos.x) > this.moveThreshold)
       {
         this.setSideAnimation(direction.x);
+        this.currentSideAnimation = direction.x;
         this.node.setPositionX(newPos.x);
       }
 
