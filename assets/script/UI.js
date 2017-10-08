@@ -38,9 +38,9 @@ cc.Class({
       this.setInputControlTouches();
     },
 
-    checkButtonsPressed: function(self,touchLoc,buttons,avoidCheckForShoot)
+    checkButtonsPressed: function(self,touchLoc,buttons,ignoreShoot)
     {
-      if (!avoidCheckForShoot)
+      if (!ignoreShoot)
       {
         var distanceSquared = cc.pDistanceSQ(self.ShootCollider.node.position, touchLoc);
         buttons.shoot = (distanceSquared < (self.ShootCollider.radius * self.ShootCollider.radius));
@@ -51,12 +51,12 @@ cc.Class({
       buttons.left = (distanceSquared < (self.LeftCollider.radius * self.LeftCollider.radius));
     },
 
-    setButtonsAsPressed: function(self,touch,avoidCheckForShoot)
+    setButtonsAsPressed: function(self,touch,ignoreShoot)
     {
       var buttons = {left: false, right: false, shoot: false};
-      self.checkButtonsPressed(self,touch.getLocation(),buttons,avoidCheckForShoot);
+      self.checkButtonsPressed(self,touch.getLocation(),buttons,ignoreShoot);
       self.pressedShoot = buttons.shoot;
-      if (buttons.shoot && !buttons.left && !buttons.right) return true;
+      if (!buttons.left && !buttons.right) return true;
       self.pressedLeft = buttons.left;
       self.pressedRight = buttons.right;
     },
@@ -74,10 +74,10 @@ cc.Class({
       var self = this;
       self.canvas.on(cc.Node.EventType.TOUCH_START, function (event) {
           var touches = event.getTouches();
-          self.setButtonsAsPressed(self,touches[0]);
+          self.setButtonsAsPressed(self,touches[0],false);
           if (touches.length >= 2)
           {
-            self.setButtonsAsPressed(self,touches[1]);
+            self.setButtonsAsPressed(self,touches[1],false);
           }
           return true;
       }, self.node);
