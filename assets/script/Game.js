@@ -20,19 +20,18 @@ cc.Class({
     this.isRunning = false;
     this.node.on('allDead', this.reSpawn, this);
     this.node.on('GameOver', this.onGameOver, this);
-    //console.log(Enemy);
     this.onStartGame();
   },
 
 
   onStartGame: function () {
     cc.director.getCollisionManager().enabled = true;
-    cc.director.getCollisionManager().enabledDebugDraw  = true;
+    // cc.director.getCollisionManager().enabledDebugDraw  = true;
 
     // this.resetScore();
 
     this.isRunning = true;
-    // this.spawnEnemies();
+    this.spawnEnemies();
   },
 
   onGameOver: function ()

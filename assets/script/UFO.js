@@ -16,8 +16,8 @@ cc.Class({
       this.maxRotation = 25;
       this.isSpawned = false;
       this.isMoving = true;
-      this.minPosX = -this.node.parent.width/2 - 200;
-      this.maxPosX = this.node.parent.width/2 + 200;
+      this.minPosX = -this.node.parent.width/2 - 400;
+      this.maxPosX = this.node.parent.width/2 + 400;
       this.UFOLaser = this.laser.getComponent("UFOLaser");
       this.node.on('laserDone', this.laserDone, this);
       this.setInputControlByTouch();
