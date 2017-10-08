@@ -25,7 +25,6 @@ cc.Class({
       }
     },
 
-    // use this for initialization
     onLoad: function () {
       this.pressedShoot = false;
       this.pressedLeft = false;
@@ -43,32 +42,32 @@ cc.Class({
     {
       var distanceSquared = cc.pDistanceSQ(self.ShootCollider.node.position, touchLoc);
       buttons.shoot = (distanceSquared < (self.ShootCollider.radius * self.ShootCollider.radius));
-      var distanceSquared = cc.pDistanceSQ(this.rightPosition, touchLoc);
+      distanceSquared = cc.pDistanceSQ(this.rightPosition, touchLoc);
       buttons.right = (distanceSquared < (self.RightCollider.radius * self.RightCollider.radius));
-      var distanceSquared = cc.pDistanceSQ(this.leftPosition, touchLoc);
+      distanceSquared = cc.pDistanceSQ(this.leftPosition, touchLoc);
       buttons.left = (distanceSquared < (self.LeftCollider.radius * self.LeftCollider.radius));
     },
 
     setButtonsAsPressed: function(self,touch)
     {
-      self.buttons = {left: false, right: false, shoot: false};
-      self.checkButtonsPressed(self,touch.getLocation(),self.buttons);
-      self.pressedShoot = self.buttons.shoot;
-      self.pressedLeft = self.buttons.left;
-      self.pressedRight = self.buttons.right;
+      var buttons = {left: false, right: false, shoot: false};
+      self.checkButtonsPressed(self,touch.getLocation(),buttons);
+      self.pressedShoot = buttons.shoot;
+      if (buttons.shoot && !buttons.left && !buttons.right) return true;
+      self.pressedLeft = buttons.left;
+      self.pressedRight = buttons.right;
     },
 
     restartButtonsOnEnd: function(self,touch)
     {
-      self.buttons = {left: false, right: false, shoot: false};
-      self.checkButtonsPressed(self,touch.getLocation(),self.buttons);
-      if (self.buttons.shoot) self.pressedShoot = false;
-      if (self.buttons.left) self.pressedLeft = false;
-      if (self.buttons.right) self.pressedRight = false;
+      var buttons = {left: false, right: false, shoot: false};
+      self.checkButtonsPressed(self,touch.getLocation(),buttons);
+      if (buttons.shoot) self.pressedShoot = false;
+      if (buttons.left) self.pressedLeft = false;
+      if (buttons.right) self.pressedRight = false;
     },
 
     setInputControlTouches: function(){
-      this.buttons = {left: false, right: false, shoot: false};
       var self = this;
       self.canvas.on(cc.Node.EventType.TOUCH_START, function (event) {
           var touches = event.getTouches();
