@@ -83,6 +83,7 @@ cc.Class({
       if (this.shooting && this.inTimeRange()) {
         this.lastShot = Date.now();
         this.createLaser();
+        this.shooting = false;
       }
     },
 });

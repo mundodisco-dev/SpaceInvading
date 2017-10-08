@@ -138,7 +138,7 @@ cc.Class({
       if (!this.alive) return;
       if (!this.isMoving)
       {
-        if (this.currentSideAnimation != 0) return;
+        if (this.currentSideAnimation == 0) return;
         this.currentSideAnimation = 0;
         this.setSideAnimation(0);
         return;

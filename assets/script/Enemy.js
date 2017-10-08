@@ -186,7 +186,7 @@ cc.Class({
 
   onCollisionEnter: function (other, self) {
     // TO-DO Explosion
-    console.log(" HIT ! " + this.positionX + ","+this.positionY);
+    // console.log(" HIT ! " + this.positionX + ","+this.positionY);
     var event = new cc.Event.EventCustom("enemyDown", true);
     this.node.dispatchEvent(event);
 

@@ -27,12 +27,12 @@ cc.Class({
 
   onStartGame: function () {
     cc.director.getCollisionManager().enabled = true;
-    // cc.director.getCollisionManager().enabledDebugDraw  = true;
-    
+    cc.director.getCollisionManager().enabledDebugDraw  = true;
+
     // this.resetScore();
 
     this.isRunning = true;
-    this.spawnEnemies();
+    // this.spawnEnemies();
   },
 
   onGameOver: function ()
