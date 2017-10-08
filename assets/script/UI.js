@@ -38,20 +38,23 @@ cc.Class({
       this.setInputControlTouches();
     },
 
-    checkButtonsPressed: function(self,touchLoc,buttons)
+    checkButtonsPressed: function(self,touchLoc,buttons,avoidCheckForShoot)
     {
-      var distanceSquared = cc.pDistanceSQ(self.ShootCollider.node.position, touchLoc);
-      buttons.shoot = (distanceSquared < (self.ShootCollider.radius * self.ShootCollider.radius));
+      if (!avoidCheckForShoot)
+      {
+        var distanceSquared = cc.pDistanceSQ(self.ShootCollider.node.position, touchLoc);
+        buttons.shoot = (distanceSquared < (self.ShootCollider.radius * self.ShootCollider.radius));
+      }
       distanceSquared = cc.pDistanceSQ(this.rightPosition, touchLoc);
       buttons.right = (distanceSquared < (self.RightCollider.radius * self.RightCollider.radius));
       distanceSquared = cc.pDistanceSQ(this.leftPosition, touchLoc);
       buttons.left = (distanceSquared < (self.LeftCollider.radius * self.LeftCollider.radius));
     },
 
-    setButtonsAsPressed: function(self,touch)
+    setButtonsAsPressed: function(self,touch,avoidCheckForShoot)
     {
       var buttons = {left: false, right: false, shoot: false};
-      self.checkButtonsPressed(self,touch.getLocation(),buttons);
+      self.checkButtonsPressed(self,touch.getLocation(),buttons,avoidCheckForShoot);
       self.pressedShoot = buttons.shoot;
       if (buttons.shoot && !buttons.left && !buttons.right) return true;
       self.pressedLeft = buttons.left;
@@ -81,15 +84,14 @@ cc.Class({
 
       self.canvas.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
           var touches = event.getTouches();
-          self.setButtonsAsPressed(self,touches[0]);
+          self.setButtonsAsPressed(self,touches[0],true);
           if (touches.length >= 2)
           {
-            self.setButtonsAsPressed(self,touches[1]);
+            self.setButtonsAsPressed(self,touches[1],true);
           }
           return true;
       }, self.node);
       self.canvas.on(cc.Node.EventType.TOUCH_END, function (event) {
-          console.log("TOUCH_END");
           var touches = event.getTouches();
           self.restartButtonsOnEnd(self,touches[0]);
           if (touches.length >= 2)
