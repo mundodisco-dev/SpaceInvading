@@ -31,6 +31,7 @@ cc.Class({
       var touchLoc = touches[0].getLocation();
       if (self.inRange(self.node.position,this.parent.convertToNodeSpaceAR(touchLoc)))
       {
+        // TO-DO activar tras un tiempo 
         self.activateLaser(false);
       }
       }, this.node);
@@ -56,8 +57,7 @@ cc.Class({
 
     onCollisionEnter: function (other, self)
     {
-      // TO-DO
-      console.log("UFO hit! Shoot!");
+      // TO-DO heroe para escudo
       this.activateLaser(true);
     },
 

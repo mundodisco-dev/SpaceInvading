@@ -110,10 +110,11 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
+      // TO-DO
       this.lives--;
       if (this.lives >= 0)
       {
-        // TO-DO destroy y respawn 
+        // TO-DO destroy y respawn
         var event = new cc.Event.EventCustom("numLifesChanged", true);
         event.setUserData({type:-1});
         this.node.dispatchEvent(event);
@@ -142,7 +143,7 @@ cc.Class({
       this.direction = {x:0,y:0};
     },
 
-    lifeIncrase: function()
+    lifeIncrease: function()
     {
       var event = new cc.Event.EventCustom("numLifesChanged", true);
       this.lives++;

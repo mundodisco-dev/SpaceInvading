@@ -31,34 +31,28 @@ cc.Class({
     this.onStartGame();
   },
 
+  loadSprite: function(sprite,url)
+  {
+    cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
+      sprite.spriteFrame = spriteFrame;
+    });
+  },
+
   onNumLifesChanged: function (event)  {
     var data = event.getUserData();
     if (data.type && data.type == -1)
     {
-      console.log(data);
       // TO-DO pausar juego , respawn hero
     }
     if (this.HeroComponent.lives < 10)
     {
-      var sprite = this.livesA.getComponent(cc.Sprite);
-      var url = "Sprites/UI/numeral"+this.HeroComponent.lives;
-      cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
-        sprite.spriteFrame = spriteFrame;
-      });
+      this.loadSprite(this.livesA.getComponent(cc.Sprite),"Sprites/UI/numeral"+this.HeroComponent.lives);
       if (this.livesB.activeInHierarchy) this.livesB.active = false;
     }
     else if (this.HeroComponent.lives < 99)
     {
-      var sprite = this.livesA.getComponent(cc.Sprite);
-      var url = "Sprites/UI/numeral"+ Math.trunc(this.HeroComponent.lives / 10);
-      cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
-        sprite.spriteFrame = spriteFrame;
-      });
-      var spriteB = this.livesB.getComponent(cc.Sprite);
-      var urlB = "Sprites/UI/numeral"+(this.HeroComponent.lives % 10);
-      cc.loader.loadRes(urlB, cc.SpriteFrame, function (err, spriteFrame) {
-        spriteB.spriteFrame = spriteFrame;
-      });
+      this.loadSprite(this.livesA.getComponent(cc.Sprite),"Sprites/UI/numeral"+ Math.trunc(this.HeroComponent.lives / 10));
+      this.loadSprite(this.livesB.getComponent(cc.Sprite),"Sprites/UI/numeral"+(this.HeroComponent.lives % 10));
       if (!this.livesB.activeInHierarchy) this.livesB.active = true;
     }
 
@@ -71,7 +65,7 @@ cc.Class({
     // this.resetScore();
 
     this.isRunning = true;
-    // this.spawnEnemies();
+    this.spawnEnemies();
   },
 
   onGameOver: function ()
