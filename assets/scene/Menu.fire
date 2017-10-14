@@ -690,7 +690,7 @@
     ],
     "_prefab": null,
     "_id": "bcWPh8P8VDd6HehXfHmNN3",
-    "_opacity": 255,
+    "_opacity": 200,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -711,11 +711,11 @@
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.8,
+    "_scaleY": 0.8,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 200,
+      "x": 170,
       "y": 430
     },
     "_skewX": 0,

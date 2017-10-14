@@ -16,7 +16,7 @@ cc.Class({
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
       this.currentSideAnimation = 0;
-      this.alive = true;
+      this.lives = 3;
       // this.setInputControlByTouch();
       // this.setInputControl();
     },
@@ -110,11 +110,20 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-      return;
-      this.alive = false;
-      var event = new cc.Event.EventCustom("GameOver", true);
-      this.node.dispatchEvent(event);
-      this.node.destroy();
+      this.lives--;
+      if (this.lives >= 0)
+      {
+        // TO-DO
+        var event = new cc.Event.EventCustom("numLifesChanged", true);
+        event.setUserData({type:-1});
+        this.node.dispatchEvent(event);
+      }
+      else
+      {
+        var event = new cc.Event.EventCustom("GameOver", true);
+        this.node.dispatchEvent(event);
+        this.node.destroy();
+      }
       // TO-DO colision del UFO te da escudo
     },
 
@@ -133,9 +142,16 @@ cc.Class({
       this.direction = {x:0,y:0};
     },
 
+    lifeIncrase: function()
+    {
+      var event = new cc.Event.EventCustom("numLifesChanged", true);
+      this.lives++;
+      event.setUserData({type:1});
+      this.node.dispatchEvent(event);
+    },
     // called every frame
     update: function (dt) {
-      if (!this.alive) return;
+      if (this.lives < 0) return;
       if (!this.isMoving)
       {
         if (this.currentSideAnimation == 0) return;

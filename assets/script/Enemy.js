@@ -14,6 +14,7 @@ cc.Class({
   // use this for initialization
   onLoad: function () {
     var nodeCN = this.node.parent;
+    // TO-DO , eliminar listeners
     nodeCN.on('reEvaluateMargins', this.reCalculateMargin, this);
     nodeCN.on('enemyDown', this.enemyDown, this);
 
@@ -26,6 +27,7 @@ cc.Class({
 	init: function (game,enemyPool,positionX,positionY,url,numberEnemies,sideMargin,horizontalEnemyMargin, verticalEnemyMargin,numberLines) {
     var self = this;
     // TO-DO levels
+    // TO-DO refactor
     this.speedXIncrease = 0.04;
     this.baseIncreaseShootingByLevel = 0.0002;
     this.baseShooting = 0.01;

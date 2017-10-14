@@ -56,6 +56,7 @@ cc.Class({
       var buttons = {left: false, right: false, shoot: false};
       self.checkButtonsPressed(self,touch.getLocation(),buttons,ignoreShoot);
       self.pressedShoot = buttons.shoot;
+      // TO-DO controlar cuando es TOUCH_MOVE y se sale de ambos botones
       if (!buttons.left && !buttons.right) return true;
       self.pressedLeft = buttons.left;
       self.pressedRight = buttons.right;

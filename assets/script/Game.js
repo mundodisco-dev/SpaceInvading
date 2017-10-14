@@ -9,9 +9,13 @@ cc.Class({
           default: null,
           type: cc.Prefab
       },
-      player: {
+      hero: {
           default: null,
           type: cc.Node
+      },
+      ui: {
+        default: null,
+        type: cc.Node
       },
   },
 
@@ -20,9 +24,45 @@ cc.Class({
     this.isRunning = false;
     this.node.on('allDead', this.reSpawn, this);
     this.node.on('GameOver', this.onGameOver, this);
+    this.node.on('numLifesChanged', this.onNumLifesChanged, this);
+    this.HeroComponent = this.hero.getComponent("Hero");
+    this.livesA = this.ui.getChildByName('LivesA');
+    this.livesB = this.ui.getChildByName('LivesB');
     this.onStartGame();
   },
 
+  onNumLifesChanged: function (event)  {
+    var data = event.getUserData();
+    if (data.type && data.type == -1)
+    {
+      console.log(data);
+      // TO-DO pausar juego , respawn hero
+    }
+    if (this.HeroComponent.lives < 10)
+    {
+      var sprite = this.livesA.getComponent(cc.Sprite);
+      var url = "Sprites/UI/numeral"+this.HeroComponent.lives;
+      cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
+        sprite.spriteFrame = spriteFrame;
+      });
+      if (this.livesB.activeInHierarchy) this.livesB.active = false;
+    }
+    else if (this.HeroComponent.lives < 99)
+    {
+      var sprite = this.livesA.getComponent(cc.Sprite);
+      var url = "Sprites/UI/numeral"+ Math.trunc(this.HeroComponent.lives / 10);
+      cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
+        sprite.spriteFrame = spriteFrame;
+      });
+      var spriteB = this.livesB.getComponent(cc.Sprite);
+      var urlB = "Sprites/UI/numeral"+(this.HeroComponent.lives % 10);
+      cc.loader.loadRes(urlB, cc.SpriteFrame, function (err, spriteFrame) {
+        spriteB.spriteFrame = spriteFrame;
+      });
+      if (!this.livesB.activeInHierarchy) this.livesB.active = true;
+    }
+
+  },
 
   onStartGame: function () {
     cc.director.getCollisionManager().enabled = true;
@@ -57,7 +97,7 @@ cc.Class({
     var verticalEnemyMargin = 70;
     var positionX = -2 * horizontalEnemyMargin;
     // TO-DO Levels
-    var positionY = 40;
+    var positionY = 0;
     this.EnemyMapPool = [];
     for (var j=0; j<numberLines+0; j++)
     {
