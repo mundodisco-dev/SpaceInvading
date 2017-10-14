@@ -71,7 +71,7 @@ cc.Class({
     // this.resetScore();
 
     this.isRunning = true;
-    this.spawnEnemies();
+    // this.spawnEnemies();
   },
 
   onGameOver: function ()

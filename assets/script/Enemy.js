@@ -14,7 +14,6 @@ cc.Class({
   // use this for initialization
   onLoad: function () {
     var nodeCN = this.node.parent;
-    // TO-DO , eliminar listeners
     nodeCN.on('reEvaluateMargins', this.reCalculateMargin, this);
     nodeCN.on('enemyDown', this.enemyDown, this);
 
@@ -220,6 +219,10 @@ cc.Class({
       var event = new cc.Event.EventCustom("allDead", true);
       this.node.dispatchEvent(event);
     }
+    var nodeCN = this.node.parent;
+    nodeCN.targetOff(this.node);
+    // nodeCN.off('reEvaluateMargins', this.reCalculateMargin, this);
+    // nodeCN.off('enemyDown', this.enemyDown, this);
     this.node.destroy();
   },
 

@@ -113,7 +113,7 @@ cc.Class({
       this.lives--;
       if (this.lives >= 0)
       {
-        // TO-DO
+        // TO-DO destroy y respawn 
         var event = new cc.Event.EventCustom("numLifesChanged", true);
         event.setUserData({type:-1});
         this.node.dispatchEvent(event);
