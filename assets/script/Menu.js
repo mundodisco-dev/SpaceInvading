@@ -11,7 +11,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        // this.label.string = this.text;
+        // TO-DO 
         this.audioOn = true;
     },
 

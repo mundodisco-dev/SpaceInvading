@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "07dca3b4-fc10-47c2-b851-47c75728d18e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "BoomlaserGreen08": {
+      "ver": "1.0.3",
+      "uuid": "2070695b-4ea7-4388-ab1f-16ea3f0dc9ee",
+      "rawTextureUuid": "07dca3b4-fc10-47c2-b851-47c75728d18e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 48,
+      "height": 46,
+      "rawWidth": 48,
+      "rawHeight": 46,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
