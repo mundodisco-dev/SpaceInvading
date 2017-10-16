@@ -216,7 +216,7 @@ cc.Class({
     //   this.enemyPool es todo 0 , reSpawn , con y más bajo y más velocidad
     if (this.allDead())
     {
-      var event = new cc.Event.EventCustom("allDead", true);
+      var event = new cc.Event.EventCustom("allStandardDead", true);
       this.node.dispatchEvent(event);
     }
     var nodeCN = this.node.parent;
@@ -239,6 +239,7 @@ cc.Class({
     laser.position = tempPos;
     laser.active = true;
     laser.zIndex = 1;
+    laser.getComponent("EnemyLaser").setSpeed(150);
     this.canvas.addChild(laser);
     return true;
   },
@@ -255,7 +256,7 @@ cc.Class({
     // TO-DO randomize
     if (this.decidedToShoot())
     {
-      this.createLaser();
+      this.createLaser(150);
       this.lastShot = Date.now();
     }
 
@@ -290,7 +291,7 @@ cc.Class({
         this.goingDown = true;
         this.goingDownStart = this.node.position.y;
         if (this.speedX > 0) this.speedX += this.speedXIncrease
-        else  this.speedX -= this.speedXIncrease
+        else this.speedX -= this.speedXIncrease
         this.speedX *=-1;
       }
       else

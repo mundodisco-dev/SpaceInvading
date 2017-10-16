@@ -16,7 +16,7 @@ cc.Class({
       this.minPosX = -this.node.parent.width/2 + this.sideMargin;
       this.maxPosX = this.node.parent.width/2 - this.sideMargin;
       this.currentSideAnimation = 0;
-      this.lives = 3;
+      this.lives = 100;
       // this.setInputControlByTouch();
       // this.setInputControl();
     },

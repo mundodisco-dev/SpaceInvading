@@ -7,7 +7,11 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+    },
 
+    setSpeed: function (speed)
+    {
+      this.speed = speed;
     },
 
     onCollisionEnter: function (other, self) {

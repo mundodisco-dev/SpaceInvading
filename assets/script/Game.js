@@ -9,6 +9,10 @@ cc.Class({
           default: null,
           type: cc.Prefab
       },
+    runnerPrefab: {
+          default: null,
+          type: cc.Prefab
+      },
       hero: {
           default: null,
           type: cc.Node
@@ -22,7 +26,8 @@ cc.Class({
   // use this for initialization
   onLoad: function () {
     this.isRunning = false;
-    this.node.on('allDead', this.nextLevel, this);
+    this.isSpawningRunners = false;
+    this.node.on('allStandardDead', this.nextLevel, this);
     this.node.on('GameOver', this.onGameOver, this);
     this.node.on('numLifesChanged', this.onNumLifesChanged, this);
     this.HeroComponent = this.hero.getComponent("Hero");
@@ -68,7 +73,9 @@ cc.Class({
     // this.resetScore();
     this.currentLevel = 1;
     this.isRunning = true;
-    this.spawnEnemies();
+
+    // this.initiateRunners();
+    this.spawnStandardEnemies();
   },
 
   nextLevel: function() {
@@ -77,13 +84,14 @@ cc.Class({
     // TO-DO
     //  aumentar velocidad
     // acercar Y a hero
-    this.spawnEnemies();
+    // this.spawnStandardEnemies();
+    this.initiateRunners();
   },
 
-	spawnEnemies: function() {
+	spawnStandardEnemies: function() {
     var newEnemy = null;
-    var numberEnemies = 1;
-    var numberLines = 1;
+    var numberEnemies = 5;
+    var numberLines = 5;
     var positionX = -2 * this.horizontalEnemyMargin;
     // TO-DO Levels
     var positionY = 0;
@@ -105,6 +113,33 @@ cc.Class({
 
   },
 
+
+  initiateRunners: function()
+  {
+    this.isSpawningRunners = true;
+    this.runnersSpawned = 0;
+    this.runnersNumberLimit = 10;
+    this.runnerMarginPosY = 70;
+    this.lastRunnerSpawned = null;
+    this.mssBetweenRunners = 2250;
+  },
+
+  spawnRunners: function()
+  {
+    this.lastRunnerSpawned = Date.now();
+    this.createRunner(1);
+    this.createRunner(-1);
+    this.runnersSpawned += 2;
+  },
+
+  createRunner: function(direction)
+  {
+    var newRunner = cc.instantiate(this.runnerPrefab);
+    this.node.addChild(newRunner);
+    newRunner.getComponent("EnemyRunner").init(direction, this.runnerMarginPosY * this.runnersSpawned/2 , 500 * this.runnersSpawned/2);
+    newRunner.setPosition({x:569*direction,y:292});
+  },
+
   onGameOver: function ()
   {
     // TO-DO
@@ -114,7 +149,10 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-
+      if (this.isSpawningRunners && ((Date.now() - this.lastRunnerSpawned) > this.mssBetweenRunners) && this.runnersSpawned < this.runnersNumberLimit)
+      {
+          this.spawnRunners();
+      }
     },
 
 
