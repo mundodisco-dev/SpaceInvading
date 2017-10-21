@@ -11,7 +11,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        // TO-DO 
+        // TO-DO
         this.audioOn = true;
     },
 
