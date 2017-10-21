@@ -29,9 +29,9 @@ cc.Class({
       this.pressedShoot = false;
       this.pressedLeft = false;
       this.pressedRight = false;
-      // TO-DO revisar
-      this.rightPosition = cc.p({x: this.RightCollider.node.position.x -50, y: this.RightCollider.node.position.y});
-      this.leftPosition =  cc.p({x: this.LeftCollider.node.position.x -50, y: this.LeftCollider.node.position.y});
+
+      this.rightPosition = cc.p({x: this.RightCollider.node.position.x, y: this.RightCollider.node.position.y});
+      this.leftPosition =  cc.p({x: this.LeftCollider.node.position.x, y: this.LeftCollider.node.position.y});
 
       this.ShooterComponent = this.Shooter.getComponent("Shooter");
       this.HeroComponent = this.Hero.getComponent("Hero");
@@ -47,6 +47,7 @@ cc.Class({
       }
       distanceSquared = cc.pDistanceSQ(this.rightPosition, touchLoc);
       buttons.right = (distanceSquared < (self.RightCollider.radius * self.RightCollider.radius));
+      if (buttons.right) return;
       distanceSquared = cc.pDistanceSQ(this.leftPosition, touchLoc);
       buttons.left = (distanceSquared < (self.LeftCollider.radius * self.LeftCollider.radius));
     },
