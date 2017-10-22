@@ -132,6 +132,7 @@ cc.Class({
   spawnRunners: function()
   {
     this.lastRunnerSpawned = Date.now();
+    // TO-DO levels on runners
     this.createRunner(1);
     this.createRunner(-1);
     this.runnersSpawned += 2;
@@ -150,6 +151,23 @@ cc.Class({
     newRunner.setPosition({x:569*direction,y:292});
   },
 
+  checkToSpawnRunners: function()
+  {
+    if (this.isSpawningRunners && ((Date.now() - this.lastRunnerSpawned) > this.mssBetweenRunners) && this.runnersSpawned < this.runnersNumberLimit)
+    {
+        this.spawnRunners();
+    }
+  },
+
+  checkForNextLevel: function()
+  {
+    if (this.checkSpawnNextLevel && this.numberAliveEnemies == 0)
+    {
+      this.checkSpawnNextLevel = false;
+      this.nextLevel();
+    }
+  },
+
   onGameOver: function ()
   {
     // TO-DO
@@ -159,16 +177,8 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-      if (this.checkSpawnNextLevel && this.numberAliveEnemies == 0)
-      {
-        this.nextLevel();
-        this.checkSpawnNextLevel = false;
-      }
-
-      if (this.isSpawningRunners && ((Date.now() - this.lastRunnerSpawned) > this.mssBetweenRunners) && this.runnersSpawned < this.runnersNumberLimit)
-      {
-          this.spawnRunners();
-      }
+      this.checkForNextLevel();
+      this.checkToSpawnRunners();
     },
 
 
