@@ -15,6 +15,7 @@ cc.Class({
       this.game = this.canvas.getComponent("Game");
       this.maxPosX = this.canvas.width/2 - this.sideMargin;
       this.minPosX = -this.canvas.width/2 + this.sideMargin;
+      this.points = 40;
       this.minPosY = -100;
       this.speedX = -5;
       this.speedY = 1;
@@ -33,7 +34,7 @@ cc.Class({
 
     onCollisionEnter: function (other, self)
     {
-      this.game.enemyDown();
+      this.game.enemyDown({"type":"runner","points":this.points});
       this.node.destroy();
     },
 

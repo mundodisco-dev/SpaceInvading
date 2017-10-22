@@ -45,6 +45,7 @@ cc.Class({
     this.minPosX = -this.node.parent.width/2 + this.sideMargin + (positionX * horizontalEnemyMargin);
     // TO-DO
     this.minPosY = -250 + (verticalEnemyMargin * positionY);
+    this.points = 10 + (10 * positionY);
 
     var sprite = this.node.getComponent(cc.Sprite);
     cc.loader.loadRes(url, cc.SpriteFrame, function (err, spriteFrame) {
@@ -214,7 +215,7 @@ cc.Class({
       this.node.dispatchEvent(event);
     }
 
-    this.game.enemyDown();
+    this.game.enemyDown({"type":"standard","points":this.points});
     var nodeCN = this.node.parent;
     nodeCN.targetOff(this.node);
     // nodeCN.off('reEvaluateMargins', this.reCalculateMargin, this);

@@ -21,6 +21,10 @@ cc.Class({
         default: null,
         type: cc.Node
       },
+      scoreDisplay:{
+        default: null,
+        type: cc.Label
+      },
   },
 
   // use this for initialization
@@ -32,7 +36,6 @@ cc.Class({
     this.HeroComponent = this.hero.getComponent("Hero");
     this.livesA = this.ui.getChildByName('LivesA');
     this.livesB = this.ui.getChildByName('LivesB');
-
     this.horizontalEnemyMargin = 70;
     this.verticalEnemyMargin = 70;
 
@@ -69,7 +72,7 @@ cc.Class({
   onStartGame: function () {
     cc.director.getCollisionManager().enabled = true;
     // cc.director.getCollisionManager().enabledDebugDraw  = true;
-    // this.resetScore();
+    this.resetScore();
     this.currentLevel = 1;
     this.checkSpawnNextLevel = false;
     this.isRunning = true;
@@ -78,22 +81,48 @@ cc.Class({
     this.spawnStandardEnemies();
   },
 
+  resetScore: function()
+  {
+    this.score = 0;
+    this.updateScoreUI();
+  },
+
+  updateScore: function(points)
+  {
+    this.score += points;
+    this.updateScoreUI();
+  },
+
+  updateScoreUI: function()
+  {
+    var score = this.score+"";
+    while (score.length < 8) score = "0" + score;
+    this.scoreDisplay.string = score;
+  },
+
   nextLevel: function() {
-    console.log("nextLevel");
     this.currentLevel++;
+    console.log("current Level " + this.currentLevel);
     // TO-DO
-    //  aumentar velocidad
-    // acercar Y a hero
     // this.spawnStandardEnemies();
     this.initiateRunners();
   },
 
+  enemyDown: function(infoEnemy)
+  {
+    if (infoEnemy && infoEnemy.points)
+    {
+      this.updateScore(infoEnemy.points);
+    }
+    this.numberAliveEnemies--;
+  },
+
 	spawnStandardEnemies: function() {
     var newEnemy = null;
-    var numberEnemies = 2;
-    var numberLines = 2;
     var positionX = -2 * this.horizontalEnemyMargin;
     // TO-DO Levels
+    var numberEnemies = 2;
+    var numberLines = 2;
     var positionY = 0;
     this.EnemyMapPool = [];
     for (var j=0; j<numberLines+0; j++)
@@ -114,16 +143,11 @@ cc.Class({
     this.checkSpawnNextLevel = true;
   },
 
-  enemyDown: function()
-  {
-    this.numberAliveEnemies--;
-  },
-
   initiateRunners: function()
   {
     this.isSpawningRunners = true;
-    this.runnersSpawned = 0;
-    this.runnersNumberLimit = 10;
+    this.spawnedRunners = 0;
+    this.numberRunners = 2;
     this.runnerMarginPosY = 70;
     this.lastRunnerSpawned = null;
     this.mssBetweenRunners = 2250;
@@ -135,9 +159,9 @@ cc.Class({
     // TO-DO levels on runners
     this.createRunner(1);
     this.createRunner(-1);
-    this.runnersSpawned += 2;
+    this.spawnedRunners += 2;
     this.numberAliveEnemies += 2;
-    if (this.runnersSpawned >= this.runnersNumberLimit)
+    if (this.spawnedRunners >= this.numberRunners)
     {
       this.checkSpawnNextLevel = true;
     }
@@ -147,13 +171,13 @@ cc.Class({
   {
     var newRunner = cc.instantiate(this.runnerPrefab);
     this.node.addChild(newRunner);
-    newRunner.getComponent("EnemyRunner").init(direction, this.runnerMarginPosY * this.runnersSpawned/2 , 500 * this.runnersSpawned/2);
+    newRunner.getComponent("EnemyRunner").init(direction, this.runnerMarginPosY * this.spawnedRunners/2 , 500 * this.spawnedRunners/2);
     newRunner.setPosition({x:569*direction,y:292});
   },
 
   checkToSpawnRunners: function()
   {
-    if (this.isSpawningRunners && ((Date.now() - this.lastRunnerSpawned) > this.mssBetweenRunners) && this.runnersSpawned < this.runnersNumberLimit)
+    if (this.isSpawningRunners && ((Date.now() - this.lastRunnerSpawned) > this.mssBetweenRunners) && this.spawnedRunners < this.numberRunners)
     {
         this.spawnRunners();
     }

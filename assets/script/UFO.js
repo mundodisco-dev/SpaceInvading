@@ -18,6 +18,7 @@ cc.Class({
       this.isMoving = true;
       this.minPosX = -this.node.parent.width/2 - 400;
       this.maxPosX = this.node.parent.width/2 + 400;
+      this.points = 125;
       this.UFOLaser = this.laser.getComponent("UFOLaser");
       this.node.on('laserDone', this.laserDone, this);
       this.setInputControlByTouch();
@@ -31,7 +32,7 @@ cc.Class({
       var touchLoc = touches[0].getLocation();
       if (self.inRange(self.node.position,this.parent.convertToNodeSpaceAR(touchLoc)))
       {
-        // TO-DO activar tras un tiempo 
+        // TO-DO activar tras un tiempo
         self.activateLaser(false);
       }
       }, this.node);
@@ -58,6 +59,7 @@ cc.Class({
     onCollisionEnter: function (other, self)
     {
       // TO-DO heroe para escudo
+      this.canvas.getComponent("Game").updateScore(this.points);
       this.activateLaser(true);
     },
 
