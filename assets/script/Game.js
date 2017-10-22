@@ -27,7 +27,6 @@ cc.Class({
   onLoad: function () {
     this.isRunning = false;
     this.isSpawningRunners = false;
-    this.node.on('allStandardDead', this.nextLevel, this);
     this.node.on('GameOver', this.onGameOver, this);
     this.node.on('numLifesChanged', this.onNumLifesChanged, this);
     this.HeroComponent = this.hero.getComponent("Hero");
@@ -72,6 +71,7 @@ cc.Class({
     // cc.director.getCollisionManager().enabledDebugDraw  = true;
     // this.resetScore();
     this.currentLevel = 1;
+    this.checkSpawnNextLevel = false;
     this.isRunning = true;
 
     // this.initiateRunners();
@@ -90,8 +90,8 @@ cc.Class({
 
 	spawnStandardEnemies: function() {
     var newEnemy = null;
-    var numberEnemies = 5;
-    var numberLines = 5;
+    var numberEnemies = 2;
+    var numberLines = 2;
     var positionX = -2 * this.horizontalEnemyMargin;
     // TO-DO Levels
     var positionY = 0;
@@ -110,9 +110,14 @@ cc.Class({
       }
       this.EnemyMapPool.push(tempEnemyPool);
     }
-
+    this.numberAliveEnemies = numberLines * numberLines;
+    this.checkSpawnNextLevel = true;
   },
 
+  enemyDown: function()
+  {
+    this.numberAliveEnemies--;
+  },
 
   initiateRunners: function()
   {
@@ -130,6 +135,11 @@ cc.Class({
     this.createRunner(1);
     this.createRunner(-1);
     this.runnersSpawned += 2;
+    this.numberAliveEnemies += 2;
+    if (this.runnersSpawned >= this.runnersNumberLimit)
+    {
+      this.checkSpawnNextLevel = true;
+    }
   },
 
   createRunner: function(direction)
@@ -149,6 +159,12 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+      if (this.checkSpawnNextLevel && this.numberAliveEnemies == 0)
+      {
+        this.nextLevel();
+        this.checkSpawnNextLevel = false;
+      }
+
       if (this.isSpawningRunners && ((Date.now() - this.lastRunnerSpawned) > this.mssBetweenRunners) && this.runnersSpawned < this.runnersNumberLimit)
       {
           this.spawnRunners();

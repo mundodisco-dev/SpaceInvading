@@ -12,6 +12,7 @@ cc.Class({
     onLoad: function () {
       this.sideMargin = 60;
       this.canvas = cc.director.getScene().getChildByName('Canvas');
+      this.game = this.canvas.getComponent("Game");
       this.maxPosX = this.canvas.width/2 - this.sideMargin;
       this.minPosX = -this.canvas.width/2 + this.sideMargin;
       this.minPosY = -100;
@@ -30,8 +31,9 @@ cc.Class({
       this.waitMssTimePerShot -= waitMssTimePerShot;
     },
 
-    onCollisionEnter: function (other, self) {
-      // TO-DO all Dead 
+    onCollisionEnter: function (other, self)
+    {
+      this.game.enemyDown();
       this.node.destroy();
     },
 

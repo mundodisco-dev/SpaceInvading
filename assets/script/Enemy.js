@@ -18,6 +18,7 @@ cc.Class({
     nodeCN.on('enemyDown', this.enemyDown, this);
 
     this.canvas = cc.director.getScene().getChildByName('Canvas');
+    this.game = this.canvas.getComponent("Game");
     this.lastShot = Date.now();
     this.waitMssTimePerShot = 4000;
     this.resetNumberTimesAllowedReachFinal();
@@ -212,13 +213,8 @@ cc.Class({
       event.setUserData("bottom");
       this.node.dispatchEvent(event);
     }
-    // TO-DO
-    //   this.enemyPool es todo 0 , reSpawn , con y más bajo y más velocidad
-    if (this.allDead())
-    {
-      var event = new cc.Event.EventCustom("allStandardDead", true);
-      this.node.dispatchEvent(event);
-    }
+
+    this.game.enemyDown();
     var nodeCN = this.node.parent;
     nodeCN.targetOff(this.node);
     // nodeCN.off('reEvaluateMargins', this.reCalculateMargin, this);

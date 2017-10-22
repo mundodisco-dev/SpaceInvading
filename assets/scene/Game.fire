@@ -1063,7 +1063,7 @@
       "__id__": 25
     },
     "_enabled": true,
-    "speed": 500
+    "speed": 600
   },
   {
     "__type__": "cc.Sprite",
