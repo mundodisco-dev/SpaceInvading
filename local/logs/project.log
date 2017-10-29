@@ -1,63 +1,46 @@
-2017-10-22T15:31:41.437Z - normal: Load ~/.CocosCreator/settings.json
-2017-10-22T15:31:41.444Z - normal: checking language setting...
-2017-10-22T15:31:41.444Z - normal: Language: en
-2017-10-22T15:31:46.699Z - success: protocol editor-framework registered
-2017-10-22T15:31:46.700Z - success: protocol app registered
-2017-10-22T15:31:46.700Z - success: protocol theme registered
-2017-10-22T15:31:46.700Z - success: protocol profile registered
-2017-10-22T15:31:46.700Z - success: protocol packages registered
-2017-10-22T15:31:46.700Z - success: protocol unpack registerred
-2017-10-22T15:31:46.700Z - success: protocol disable-commonjs registerred
-2017-10-22T15:31:48.008Z - normal: connected!
-2017-10-22T15:31:48.012Z - normal: Check project H:\Dev\Project\SpaceInvading
-2017-10-22T15:31:48.015Z - normal: Initializing Cocos2d
-2017-10-22T15:31:50.315Z - normal: Initializing Asset Database
-2017-10-22T15:31:50.441Z - success: protocol uuid registerred
-2017-10-22T15:31:50.441Z - success: protocol db registerred
-2017-10-22T15:31:50.441Z - success: protocol thumbnail registerred
-2017-10-22T15:31:50.441Z - normal: Loading editor/builtin packages
-2017-10-22T15:31:50.498Z - success: anysdk loaded
-2017-10-22T15:31:50.718Z - success: assets loaded
-2017-10-22T15:31:50.721Z - success: builder loaded
-2017-10-22T15:31:50.726Z - success: hierarchy loaded
-2017-10-22T15:31:50.730Z - success: inspector loaded
-2017-10-22T15:31:50.732Z - success: keystore loaded
-2017-10-22T15:31:50.737Z - success: node-library loaded
-2017-10-22T15:31:50.740Z - success: package-asset loaded
-2017-10-22T15:31:50.743Z - success: preferences loaded
-2017-10-22T15:31:50.746Z - success: project-exporter loaded
-2017-10-22T15:31:50.772Z - success: project-importer loaded
-2017-10-22T15:31:50.774Z - success: project-settings loaded
-2017-10-22T15:31:50.777Z - success: ui-kit loaded
-2017-10-22T15:31:50.797Z - success: ui-grid loaded
-2017-10-22T15:31:50.802Z - success: scene loaded
-2017-10-22T15:31:50.804Z - success: sprite-editor loaded
-2017-10-22T15:31:50.812Z - success: store loaded
-2017-10-22T15:31:50.821Z - success: timeline loaded
-2017-10-22T15:31:50.821Z - normal: Loading builtin packages
-2017-10-22T15:31:50.829Z - success: asset-db-debugger loaded
-2017-10-22T15:31:50.830Z - success: color-picker loaded
-2017-10-22T15:31:50.849Z - success: console loaded
-2017-10-22T15:31:50.853Z - success: package-manager loaded
-2017-10-22T15:31:50.924Z - success: sdkbox loaded
-2017-10-22T15:31:50.928Z - success: tester loaded
-2017-10-22T15:31:50.932Z - success: ui-kit-preview-extra loaded
-2017-10-22T15:31:50.934Z - success: ui-kit-preview loaded
-2017-10-22T15:31:50.937Z - success: ui-tree loaded
-2017-10-22T15:31:52.471Z - normal: Initializing project H:\Dev\Project\SpaceInvading
-2017-10-22T15:31:52.505Z - normal: Loading packages
-2017-10-22T15:31:52.514Z - normal: Watching packages
-2017-10-22T15:31:52.569Z - normal: Run Application
-2017-10-22T15:31:57.811Z - success: preview server running at http://localhost:7456
-2017-10-22T15:32:09.033Z - normal: 1.6.0
-2017-10-22T17:15:02.719Z - error: TypeError: Cannot read property 'target' of null
-    at ui-panel-frame.e.addEventListener (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor\builtin\inspector\panel\index.js:1:6480)
-    at Object.DomUtils.fire (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dom-utils.js:1:2021)
-    at ui-panel-frame.t [as _onConfirm] (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor\builtin\inspector\panel\index.js:1:4712)
-    at Object.DomUtils.fire (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dom-utils.js:1:2021)
-    at ui-prop._emitConfirm (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\elements\prop.js:1:6060)
-    at ui-num-input.t.addEventListener (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\elements\prop.js:1:5234)
-    at Object.DomUtils.fire (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dom-utils.js:1:2021)
-    at ui-num-input._onInputConfirm (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\elements\num-input.js:1:7034)
-    at HTMLInputElement.e.addEventListener.t (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\behaviors\input-state.js:1:860)
-    at Object.DomUtils.clear (H:\Dev\Software\Cocos\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dom-utils.js:1:1125)
+2017-10-29T12:38:35.506Z - normal: Load ~/.CocosCreator/settings.json
+2017-10-29T12:38:35.513Z - normal: checking language setting...
+2017-10-29T12:38:35.513Z - normal: Language: en
+2017-10-29T12:38:41.331Z - success: protocol editor-framework registered
+2017-10-29T12:38:41.332Z - success: protocol app registered
+2017-10-29T12:38:41.332Z - success: protocol theme registered
+2017-10-29T12:38:41.332Z - success: protocol profile registered
+2017-10-29T12:38:41.332Z - success: protocol packages registered
+2017-10-29T12:38:41.332Z - success: protocol unpack registerred
+2017-10-29T12:38:41.333Z - success: protocol disable-commonjs registerred
+2017-10-29T12:38:42.649Z - normal: connected!
+2017-10-29T12:38:42.653Z - normal: Check project H:\Dev\Project\SpaceInvading
+2017-10-29T12:38:42.656Z - normal: Initializing Cocos2d
+2017-10-29T12:38:46.286Z - normal: Initializing Asset Database
+2017-10-29T12:38:46.374Z - success: protocol uuid registerred
+2017-10-29T12:38:46.374Z - success: protocol db registerred
+2017-10-29T12:38:46.375Z - success: protocol thumbnail registerred
+2017-10-29T12:38:46.375Z - normal: Loading editor/builtin packages
+2017-10-29T12:38:46.549Z - success: anysdk loaded
+2017-10-29T12:38:46.820Z - success: assets loaded
+2017-10-29T12:38:46.824Z - success: builder loaded
+2017-10-29T12:38:46.828Z - success: hierarchy loaded
+2017-10-29T12:38:46.833Z - success: inspector loaded
+2017-10-29T12:38:46.835Z - success: keystore loaded
+2017-10-29T12:38:46.840Z - success: node-library loaded
+2017-10-29T12:38:46.843Z - success: package-asset loaded
+2017-10-29T12:38:46.847Z - success: preferences loaded
+2017-10-29T12:38:46.849Z - success: project-exporter loaded
+2017-10-29T12:38:46.873Z - success: project-importer loaded
+2017-10-29T12:38:46.876Z - success: project-settings loaded
+2017-10-29T12:38:46.879Z - success: ui-kit loaded
+2017-10-29T12:38:46.908Z - success: ui-grid loaded
+2017-10-29T12:38:46.913Z - success: scene loaded
+2017-10-29T12:38:46.915Z - success: sprite-editor loaded
+2017-10-29T12:38:46.920Z - success: store loaded
+2017-10-29T12:38:46.935Z - success: timeline loaded
+2017-10-29T12:38:46.935Z - normal: Loading builtin packages
+2017-10-29T12:38:46.965Z - success: asset-db-debugger loaded
+2017-10-29T12:38:46.965Z - success: color-picker loaded
+2017-10-29T12:38:46.993Z - success: console loaded
+2017-10-29T12:38:46.997Z - success: package-manager loaded
+2017-10-29T12:38:47.025Z - success: sdkbox loaded
+2017-10-29T12:38:47.030Z - success: tester loaded
+2017-10-29T12:38:47.034Z - success: ui-kit-preview-extra loaded
+2017-10-29T12:38:47.037Z - success: ui-kit-preview loaded
+2017-10-29T12:38:47.041Z - success: ui-tree loaded
