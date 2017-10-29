@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserPink1",
+    "texture": "74de357e-86a2-4176-b7ab-4a5ac85dbae0",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      38,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      38,
+      100
+    ]
+  }
+}

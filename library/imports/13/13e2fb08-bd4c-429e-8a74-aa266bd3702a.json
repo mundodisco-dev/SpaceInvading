@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserRed06",
+    "texture": "96982a8c-05d4-416f-a6a8-453d86fb4853",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      13,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      13,
+      37
+    ]
+  }
+}

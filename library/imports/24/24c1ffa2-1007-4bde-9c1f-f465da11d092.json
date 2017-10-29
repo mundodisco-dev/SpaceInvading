@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ShotlaserGreen",
+    "texture": "e4972b8e-d29b-472a-85e9-f1c11dce9a65",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      56,
+      54
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      56,
+      54
+    ]
+  }
+}

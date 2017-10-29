@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserGreen_groundBurst",
+    "texture": "325b399d-e645-49c8-8ad0-a83dd19f0262",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      172,
+      78
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      172,
+      78
+    ]
+  }
+}

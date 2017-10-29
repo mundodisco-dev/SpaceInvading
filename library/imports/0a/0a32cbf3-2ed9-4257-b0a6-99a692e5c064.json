@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserBeige1",
+    "texture": "335a2025-6eda-402f-be78-f44dd419beba",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      38,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      38,
+      100
+    ]
+  }
+}

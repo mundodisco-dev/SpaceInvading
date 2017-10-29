@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "simpleExplosion03",
+    "texture": "416d657f-9d7d-40ac-aa5d-e7dff3ac27a9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      97,
+      97
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      97,
+      97
+    ]
+  }
+}

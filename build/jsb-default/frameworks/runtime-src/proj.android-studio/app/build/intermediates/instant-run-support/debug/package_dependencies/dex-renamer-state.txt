@@ -1,0 +1,13 @@
+#Sun Sep 03 18:05:28 CEST 2017
+renamed.3=classes4.dex
+renamed.2=classes.dex
+renamed.1=classes2.dex
+renamed.0=classes3.dex
+base.3=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\8\\httpclient-4.4.1.1_843452969f307b349b29f0eaf04dabd34a39b1ed
+base.2=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\mipmap-libPluginProtocol_bbac18c2981e75c2be6e4f3f3d8807016dff37ad
+base.1=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\8\\android-async-http-1.4.9_fea3ea82a874acb25208e30bdf1f40e2e484e386
+base.0=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\8\\com.android.vending.expansion.zipfile_c61f7d2f3fbd9fd5b976e102b966ea08a166aef9
+file.3=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\8\\httpclient-4.4.1.1_843452969f307b349b29f0eaf04dabd34a39b1ed\\classes.dex
+file.2=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\mipmap-libPluginProtocol_bbac18c2981e75c2be6e4f3f3d8807016dff37ad\\classes.dex
+file.1=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\8\\android-async-http-1.4.9_fea3ea82a874acb25208e30bdf1f40e2e484e386\\classes.dex
+file.0=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\8\\com.android.vending.expansion.zipfile_c61f7d2f3fbd9fd5b976e102b966ea08a166aef9\\classes.dex

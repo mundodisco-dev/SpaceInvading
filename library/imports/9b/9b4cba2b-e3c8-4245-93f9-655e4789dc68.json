@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserBlue_burst",
+    "texture": "45927efb-ff3d-44b7-a8f0-062fd9f2df76",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      188,
+      188
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      188,
+      188
+    ]
+  }
+}

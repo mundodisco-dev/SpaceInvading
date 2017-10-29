@@ -1,0 +1,10 @@
+{
+  "packedTextures": [
+    {
+      "path": "H:\\Dev\\Project\\SpaceInvading\\temp\\TexturePacker\\Resources\\Sprites\\AlienPowerUp\\AutoAtlas.pac/AutoAtlas-1.png",
+      "name": "AutoAtlas-1.png",
+      "size": "1024x1024"
+    }
+  ],
+  "unpackedTextures": []
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shipBlue_manned",
+    "texture": "4d2ede2b-46b3-43a7-9657-84cab990650c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      124,
+      145
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      124,
+      145
+    ]
+  }
+}

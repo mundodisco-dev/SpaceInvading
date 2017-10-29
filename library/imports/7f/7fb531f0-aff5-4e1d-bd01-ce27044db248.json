@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "spaceMissiles_034",
+    "texture": "e75d0669-99fa-4f2e-ba03-889c37cec500",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      21,
+      45
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      21,
+      45
+    ]
+  }
+}

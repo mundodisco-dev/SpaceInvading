@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "spritesheet_particles",
+    "texture": "7c74d7ec-2fcf-467a-908d-4448e4335fce",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      434,
+      471
+    ],
+    "offset": [
+      -39,
+      20.5
+    ],
+    "originalSize": [
+      512,
+      512
+    ]
+  }
+}

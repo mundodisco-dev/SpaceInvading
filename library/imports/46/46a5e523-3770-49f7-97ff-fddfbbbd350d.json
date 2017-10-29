@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yellowCloud2",
+    "texture": "fd815c55-f743-4c62-aea0-2593b2a76139",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      93,
+      102
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      102
+    ]
+  }
+}

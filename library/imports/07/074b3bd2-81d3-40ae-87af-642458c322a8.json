@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "spaceShips_002",
+    "texture": "1fd0c5a7-32ae-4926-89db-5a82d568406c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      252,
+      216
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      252,
+      216
+    ]
+  }
+}

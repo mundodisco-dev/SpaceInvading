@@ -1,0 +1,4 @@
+#Sat Oct 21 21:46:52 CEST 2017
+base.0=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=H\:\\Dev\\Project\\SpaceInvading\\build\\jsb-default\\frameworks\\runtime-src\\proj.android-studio\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

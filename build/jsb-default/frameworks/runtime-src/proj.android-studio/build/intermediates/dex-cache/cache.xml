@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a7e3f0014d14b64f7cd817c082a5baa4cb56c049">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\pre-dexed\debug\classes_243ae1a43e0e2e96a5cf6e6426d7d9f527de19d3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\libs\android-async-http-1.4.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="769f000c2940ab43578cd56ffcc81340aad0b182">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\8\android-async-http-1.4.9_fea3ea82a874acb25208e30bdf1f40e2e484e386\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fb5c3e49e412a9ec23506cdb28a6920ccaaac87c">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4af73e71db1ce91769e3a394a38c601a6eae184d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\libs\httpclient-4.4.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="becf40a1a480be2a5ccb46529dce490f31b516d5">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\8\httpclient-4.4.1.1_843452969f307b349b29f0eaf04dabd34a39b1ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\libs\com.android.vending.expansion.zipfile.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3785cbb057b995cb42463158b1a798fcc78bb3b0">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\pre-dexed\release\com.android.vending.expansion.zipfile_c61f7d2f3fbd9fd5b976e102b966ea08a166aef9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\libs\com.android.vending.expansion.zipfile.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3785cbb057b995cb42463158b1a798fcc78bb3b0">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\8\com.android.vending.expansion.zipfile_c61f7d2f3fbd9fd5b976e102b966ea08a166aef9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\libs\mipmap-libPluginProtocol.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7fc0ee57f5f4de184c51ab00af7d2adc97b7746a">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\2\mipmap-libPluginProtocol_bbac18c2981e75c2be6e4f3f3d8807016dff37ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_11f456fe921795f8d0cb52c46f8c42d516bffddb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\libs\android-async-http-1.4.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="769f000c2940ab43578cd56ffcc81340aad0b182">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\pre-dexed\release\android-async-http-1.4.9_fea3ea82a874acb25208e30bdf1f40e2e484e386.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\bundles\default\libs\httpclient-4.4.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="becf40a1a480be2a5ccb46529dce490f31b516d5">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\pre-dexed\release\httpclient-4.4.1.1_843452969f307b349b29f0eaf04dabd34a39b1ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\libs\mipmap-libPluginProtocol.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7fc0ee57f5f4de184c51ab00af7d2adc97b7746a">
+        <dex dex="H:\Dev\Project\SpaceInvading\build\jsb-default\frameworks\runtime-src\proj.android-studio\app\build\intermediates\pre-dexed\release\mipmap-libPluginProtocol_bbac18c2981e75c2be6e4f3f3d8807016dff37ad.jar" />
+    </item>
+
+</items>

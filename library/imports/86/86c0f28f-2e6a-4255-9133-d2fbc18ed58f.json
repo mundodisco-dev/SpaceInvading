@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "redCloud2",
+    "texture": "e206c389-e77c-4d73-8bb1-bf75b96dd49d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      93,
+      102
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      102
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserGreen12",
+    "texture": "0c2aac8f-27e4-4506-b5a9-e053c5a53c60",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      13,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      13,
+      37
+    ]
+  }
+}

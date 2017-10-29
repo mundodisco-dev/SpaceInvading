@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "groundExplosion03",
+    "texture": "56fb9903-2c6f-4c06-8e2c-64054aa756cc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      114,
+      62
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      114,
+      62
+    ]
+  }
+}

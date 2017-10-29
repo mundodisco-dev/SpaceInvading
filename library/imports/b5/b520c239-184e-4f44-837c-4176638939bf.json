@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "enemyBlue1",
+    "texture": "956ccb77-5d2f-4a57-aaf0-ce5303951600",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      93,
+      84
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      84
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "orangeCloud1",
+    "texture": "4024004e-6c77-4da7-9be2-6b1432834978",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      96,
+      92
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      96,
+      92
+    ]
+  }
+}

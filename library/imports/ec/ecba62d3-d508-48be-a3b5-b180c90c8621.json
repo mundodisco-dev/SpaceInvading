@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sonicExplosion08",
+    "texture": "98e2a982-765d-4aa9-973c-99d6d4ef54f1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      149,
+      151
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      149,
+      151
+    ]
+  }
+}

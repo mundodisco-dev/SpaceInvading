@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "burst",
+    "texture": "b482b879-0361-4b93-ab7d-c708b96dc473",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      171,
+      175
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      171,
+      175
+    ]
+  }
+}

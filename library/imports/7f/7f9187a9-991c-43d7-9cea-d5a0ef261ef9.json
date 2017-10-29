@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "greyCloud4",
+    "texture": "4e4c3673-566c-4994-9179-4beb15d0ae54",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      88,
+      94
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      88,
+      94
+    ]
+  }
+}

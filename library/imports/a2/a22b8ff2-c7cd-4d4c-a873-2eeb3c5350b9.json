@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "enemyShip",
+    "texture": "e3a5e6a3-d5a9-492d-b781-61e91ae5f04d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      98,
+      50
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      98,
+      50
+    ]
+  }
+}

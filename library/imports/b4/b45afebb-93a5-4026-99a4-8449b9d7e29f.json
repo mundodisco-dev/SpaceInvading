@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "laserBeige_burst",
+    "texture": "32f024b2-fb5e-4346-b508-b60a6df4f018",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      188,
+      188
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      188,
+      188
+    ]
+  }
+}

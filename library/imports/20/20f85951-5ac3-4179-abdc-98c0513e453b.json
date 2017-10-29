@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "audioOff",
+    "texture": "a9e7bf4f-6725-448e-a2f5-27d873614a1e",
+    "atlas": "",
+    "rect": [
+      9,
+      10,
+      20,
+      32
+    ],
+    "offset": [
+      -6,
+      -1
+    ],
+    "originalSize": [
+      50,
+      50
+    ]
+  }
+}

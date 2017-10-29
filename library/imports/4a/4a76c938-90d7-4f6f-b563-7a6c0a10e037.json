@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shipGreen_manned",
+    "texture": "60a1b9ed-7579-4718-b408-bf4350db305c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      124,
+      123
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      124,
+      123
+    ]
+  }
+}

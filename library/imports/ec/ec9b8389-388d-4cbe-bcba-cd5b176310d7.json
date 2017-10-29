@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "enemyRed3",
+    "texture": "98a2f1ae-358e-4cb6-999f-48d5095f15ae",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      103,
+      84
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      103,
+      84
+    ]
+  }
+}
